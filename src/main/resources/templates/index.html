@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="pt" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>    
+    
+    <title>JobBoard - Bootstrap HTML5 Job Portal Template</title>    
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/img/favicon.png"/>
+    <!-- Bootstrap CSS -->
+    
+    <link rel="stylesheet" href="assets/css/jasny-bootstrap.min.css" type="text/css"/>  
+    <link rel="stylesheet" href="assets/css/bootstrap-select.min.css" type="text/css"/>  
+    <!-- Material CSS -->
+    <link rel="stylesheet" href="assets/css/material-kit.css" type="text/css"/>
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css" type="text/css"/> 
+    <link rel="stylesheet" href="assets/fonts/themify-icons.css"/> 
+
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="assets/extras/animate.css" type="text/css"/>
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="assets/extras/owl.carousel.css" type="text/css"/>
+    <link rel="stylesheet" href="assets/extras/owl.theme.css" type="text/css"/>
+    <!-- Rev Slider CSS -->
+    <link rel="stylesheet" href="assets/extras/settings.css" type="text/css"/> 
+    <!-- Slicknav js -->
+    <link rel="stylesheet" href="assets/css/slicknav.css" type="text/css"/>
+    <!-- Main Styles -->
+    <link rel="stylesheet" href="assets/css/main.css" type="text/css"/>
+    <!-- Responsive CSS Styles -->
+    <link rel="stylesheet" href="assets/css/responsive.css" type="text/css"/>
+
+    <!-- Color CSS Styles  -->
+    <link rel="stylesheet" type="text/css" href="assets/css/colors/red.css" media="screen" />
+    
+  </head>
+
+  <body>  
+      <!-- Header Section Start -->
+      <div class="header">    
+        <!-- Start intro section -->
+        <section id="intro" class="section-intro">
+          <div class="logo-menu">
+            <nav class="navbar navbar-default" role="navigation" data-spy="affix" data-offset-top="50">
+              <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand logo" href="index.html"><img src="assets/img/logo.png" alt=""/></a>
+                </div>
+
+                <div class="collapse navbar-collapse" id="navbar">              
+                <!-- Start Navigation List -->
+                <ul class="nav navbar-nav">
+                  <li>
+                    <a class="active" href="index.html">
+                    Home <i class="fa fa-angle-down"></i>
+                    </a>
+                    <ul class="dropdown">
+                      <li>
+                        <a class="active" href="index.html">
+                        Home 1
+                        </a>
+                      </li>
+                      <li>
+                        <a href="index-02.html">
+                        Home 2
+                        </a>                          
+                      </li>
+                      <li>
+                        <a href="index-03.html">
+                        Home 3
+                        </a>
+                      </li>
+                      <li>
+                        <a href="index-04.html">
+                        Home 4
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="about.html">
+                    Pages <i class="fa fa-angle-down"></i>
+                    </a>
+                    <ul class="dropdown">
+                      <li>
+                        <a href="about.html">
+                        About
+                        </a>
+                      </li>
+                      <li>
+                        <a href="job-page.html">
+                        Job Page
+                        </a>
+                      </li>
+                      <li>
+                        <a href="job-details.html">
+                        Job Details
+                        </a>
+                      </li>
+                      <li>
+                        <a href="resume.html">
+                        Resume Page
+                        </a>
+                      </li>
+                        <li>
+                        <a href="post-job.html">
+                        Post Job
+                        </a>
+                      </li>
+                      <li>
+                        <a href="privacy-policy.html">
+                        Privacy Policy
+                        </a>
+                      </li>
+                      <li>
+                        <a href="faq.html">
+                        FAQ
+                        </a>
+                      </li>
+                      <li>
+                        <a href="pricing.html">
+                        Pricing Tables
+                        </a>
+                      </li>
+                      <li>
+                        <a href="contact.html">
+                        Contact
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">
+                    Candidates <i class="fa fa-angle-down"></i>
+                    </a>
+                    <ul class="dropdown">
+                      <li>
+                        <a href="browse-jobs.html">
+                        Browse Jobs
+                        </a>
+                      </li>
+                      <li>
+                        <a href="browse-categories.html">
+                        Browse Categories
+                        </a>
+                      </li>
+                      <li>
+                        <a href="add-resume.html">
+                        Add Resume
+                        </a>
+                      </li>
+                      <li>
+                        <a href="manage-resumes.html">
+                        Manage Resumes
+                        </a>
+                      </li>
+                      <li>
+                        <a href="job-alerts.html">
+                        Job Alerts
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">
+                    Employers <i class="fa fa-angle-down"></i>
+                    </a>
+                    <ul class="dropdown">
+                      <li>
+                        <a href="post-job.html">
+                        Add Job
+                        </a>
+                      </li>
+                      <li>
+                        <a href="manage-jobs.html">
+                        Manage Jobs
+                        </a>
+                      </li>
+                      <li>
+                        <a href="manage-applications.html">
+                        Manage Applications
+                        </a>
+                      </li>
+                      <li>
+                        <a href="browse-resumes.html">
+                        Browse Resumes
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="blog.html">
+                    Blog <i class="fa fa-angle-down"></i>
+                    </a>
+                    <ul class="dropdown">
+                      <li>
+                        <a href="blog.html">
+                        Blog - Right Sidebar
+                        </a>
+                      </li>
+                      <li>
+                        <a href="blog-left-sidebar.html">
+                        Blog - Left Sidebar
+                        </a>
+                      </li>
+                      <li><a href="blog-full-width.html">Blog - Full Width</a></li>
+                      <li>
+                        <a href="single-post.html">
+                        Blog Single Post
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right float-right">
+                  <li class="left"><a th:href="@{/registrar}"><i class="ti-pencil-alt"></i> Registrar</a></li>
+                  <li class="right"><a href="my-account.html"><i class="ti-lock"></i>  Login</a></li>
+                </ul>
+              </div>                           
+            </div>
+            <!-- Mobile Menu Start -->
+            <ul class="wpb-mobile-menu">
+              <li>
+                <a class="active" href="index.html">Home</a>
+                <ul>
+                  <li><a class="active" href="index.html">Home 1</a></li>
+                  <li><a href="index-02.html">Home 2</a></li>
+                  <li><a href="index-03.html">Home 3</a></li>
+                  <li><a href="index-04.html">Home 4</a></li>
+                </ul>                       
+              </li>
+              <li>
+                <a href="about.html">Pages</a>
+                <ul>
+                  <li><a href="about.html">About</a></li>
+                  <li><a href="job-page.html">Job Page</a></li>
+                  <li><a href="job-details.html">Job Details</a></li>
+                  <li><a href="resume.html">Resume Page</a></li>
+                  <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                  <li><a href="faq.html">FAQ</a></li>
+                  <li><a href="pricing.html">Pricing Tables</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">For Candidates</a>
+                <ul>
+                  <li><a href="browse-jobs.html">Browse Jobs</a></li>
+                  <li><a href="browse-categories.html">Browse Categories</a></li>
+                  <li><a href="add-resume.html">Add Resume</a></li>
+                  <li><a href="manage-resumes.html">Manage Resumes</a></li>
+                  <li><a href="job-alerts.html">Job Alerts</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">For Employers</a>
+                <ul>
+                  <li><a href="post-job.html">Add Job</a></li>
+                  <li><a href="manage-jobs.html">Manage Jobs</a></li>
+                  <li><a href="manage-applications.html">Manage Applications</a></li>
+                  <li><a href="browse-resumes.html">Browse Resumes</a></li>
+                </ul>
+              </li> 
+              <li>
+                <a href="blog.html">Blog</a>
+                <ul class="dropdown">
+                  <li><a href="blog.html">Blog - Right Sidebar</a></li>
+                  <li><a href="blog-left-sidebar.html">Blog - Left Sidebar</a></li>
+                  <li><a href="blog-full-width.html">Blog - Full Width</a></li>
+                  <li><a href="single-post.html">Blog Single Post</a></li>
+                </ul>
+              </li>  
+              <li class="btn-m"><a href="post-job.html"><i class="ti-pencil-alt"></i> Post A Job</a></li>
+              <li class="btn-m"><a href="my-account.html"><i class="ti-lock"></i>  Log In</a></li>          
+            </ul>
+            <!-- Mobile Menu End --> 
+          </nav>
+
+          <!-- Off Canvas Navigation -->
+          
+         
+      </div>
+      <!-- Header Section End -->    
+
+      <div class="search-container">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <h1>Encontre um freelancer com facilidade</h1><br></br><h2>Escolha um profissional que se adeque mais a seu trabalho</h2>
+              <div class="content">
+                <form method="" action="">
+                  <div class="row">
+                    <div class="col-md-4 col-sm-6">
+                      <div class="form-group">
+                        <input class="form-control" type="text" placeholder="Titulo do emprego a procurar"/>
+                        <i class="ti-time"></i>
+                      </div>
+                    </div>
+                    
+                    <div class="col-md-3 col-sm-6">
+                      <div class="search-category-container">
+                        <label class="styled-select">
+                          <select class="dropdown-product selectpicker">
+                            <option>Todas categorias</option>
+                            <option>Tecnologia</option>
+                            <option>Engenharia/Construção</option>
+                            <option>Saúde</option>
+                            <option>Serviços gerais</option>
+                            <option>Vendas</option>
+                            
+                          </select>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="col-md-1 col-sm-6">
+                      <button type="button" class="btn btn-search-icon"><i class="ti-search"></i></button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+             
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end intro section -->
+    </div>
+    
+    <!-- Find Job Section Start -->
+    <section class="find-job section">
+      <div class="container">
+        <h2 class="section-title">Últimos adicionados</h2>
+		<div class="row">
+			  <div class="col-md-12">
+			   
+
+
+				<div class="tabs-container-jobs">
+					
+					
+					<div class="tab-holder tab-content">
+						<div class="tab tab-pane fade active in" id="tab1">
+                                                     <div class="table-responsive">
+							<table class="table table-striped">
+								<thead>
+								<tr>
+									<th>Job Title</th>
+									<th>By</th>
+									<th>Option</th>
+									<th>Location</th>
+									<th>Budget</th>
+									<th></th>
+								</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>
+											<img src="http://kl-webmedia.com/demo/cravious/img/jobs/1.png" alt=""/>
+											<span>Professional Front-End Developer</span>
+										</td>
+										<td>
+											Moen
+										</td>
+										<td>
+											<span class="pill medium green">Full Time</span>
+										</td>
+										<td>
+											New York City
+										</td>
+										<td>
+											24$/h
+										</td>
+										<td class="text-center">
+											<a href="#" class="btn btn-sm btn-primary btn-apply">Aplicar</a>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<img src="http://kl-webmedia.com/demo/cravious/img/jobs/2.png" alt=""/>
+											<span>Web Designer Leader</span>
+										</td>
+										<td>
+											Sapient
+										</td>
+										<td>
+											<span class="pill medium red">Part Time</span>
+										</td>
+										<td>
+											Ohio
+										</td>
+										<td>
+											30$/h
+										</td>
+										<td class="text-center">
+											<a href="#" class="btn btn-sm btn-primary btn-apply">Aplicar</a>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<img src="http://kl-webmedia.com/demo/cravious/img/jobs/3.png" alt=""/>
+											<span>Personal Trainer</span>
+										</td>
+										<td>
+											DSM
+										</td>
+										<td>
+											<span class="pill medium green">Full Time</span>
+										</td>
+										<td>
+											Washington DC
+										</td>
+										<td>
+											16$/h
+										</td>
+										<td class="text-center">
+											<a href="#" class="btn btn-sm btn-primary btn-apply">Aplicar</a>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<img src="http://kl-webmedia.com/demo/cravious/img/jobs/4.png" alt=""/>
+											<span>Front-End/Back-end Developer</span>
+										</td>
+										<td>
+											Mindshare
+										</td>
+										<td>
+											<span class="pill medium gray">Weekend</span>
+										</td>
+										<td>
+											New York City
+										</td>
+										<td>
+											20$/h
+										</td>
+										<td class="text-center">
+											<a href="#" class="btn btn-sm btn-primary btn-apply">Aplicar</a>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<img src="http://kl-webmedia.com/demo/cravious/img/jobs/1.png" alt=""/>
+											<span>Professional Front-End Developer</span>
+										</td>
+										<td>
+											Moen
+										</td>
+										<td>
+											<span class="pill medium green">Full Time</span>
+										</td>
+										<td>
+											New York City
+										</td>
+										<td>
+											24$/h
+										</td>
+										<td class="text-center">
+											<a href="#" class="btn btn-sm btn-primary btn-apply">Aplicar</a>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<img src="http://kl-webmedia.com/demo/cravious/img/jobs/5.png" alt=""/>
+											<span>Frontend/Backendd Developer</span>
+										</td>
+										<td>
+											Disneyland
+										</td>
+										<td>
+											<span class="pill medium green">Full Time</span>
+										</td>
+										<td>
+											Paris
+										</td>
+										<td>
+											44$/h
+										</td>
+										<td class="text-center">
+											<a href="#" class="btn btn-sm btn-primary btn-apply">Aplicar</a>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<img src="http://kl-webmedia.com/demo/cravious/img/jobs/6.png" alt=""/>
+											<span>Web and graphic designer</span>
+										</td>
+										<td>
+											Jacksgap
+										</td>
+										<td>
+											<span class="pill medium red">Part time</span>
+										</td>
+										<td>
+											Berlin
+										</td>
+										<td>
+											38$/h
+										</td>
+										<td class="text-center">
+											<a href="#" class="btn btn-sm btn-primary btn-apply">Aplicar</a>
+										</td>
+									</tr>
+									
+								</tbody>
+							</table>
+                                                     </div>
+						</div>
+						
+						
+					</div>
+				
+				</div>
+
+
+
+
+			   </div>
+		</div>
+      </div>
+    </section>
+    <!-- Find Job Section End -->
+
+    
+
+   
+
+    <!-- Start Purchase Section -->
+    <section class="section purchase" data-stellar-background-ratio="0.5">
+      <div class="container">
+        <div class="row">
+          <div class="section-content text-center">
+            <h2 class="title-text">
+             Como funciona?
+            </h2>
+            <h4 style="color:#fff;padding-bottom:55px;">Anuncie uma posição de trabalho ou contrate freelancers</h4>
+            <div class="col-xs-4">
+                
+                  <span class="glyphicon glyphicon-user" style="font-size: 45px; color:#fff;"></span>
+                  <h2 style="color:#fff;margin-top:15px;font-size:20px;">Contrate</h2>
+                  <h5 class="text-centralized" style="color:#fff;font-size:14px;font-family:'Open Sans',sans-serif">
+                    Veja o portfólio do cliente e contrate para sua vaga.
+                  </h5>
+            </div>
+            <div class="col-xs-4">
+                
+                  <span class="glyphicon glyphicon-file" style="font-size: 45px; color:#fff;"></span>
+                  <h2 style="color:#fff;margin-top:15px;font-size:20px;">Publique uma vaga</h2>
+                  <h5 class="text-centralized" style="color:#fff;font-size:14px;font-family:'Open Sans',sans-serif">
+                    Publique sua vaga para ficar disponível para milhares de freelancers
+                  </h5>
+            </div>  
+            <div class="col-xs-4">
+                
+                  <span class="glyphicon glyphicon-ok" style="font-size: 45px; color:#fff;"></span>
+                  <h2 style="color:#fff;margin-top:15px;font-size:20px;">Entre em contato com o freelancer</h2>
+                  <h5 class="text-centralized" style="color:#fff;font-size:14px;font-family:'Open Sans',sans-serif">
+                    Entre em contato com o contratante ou contratado para fechar negócio!
+                  </h5>
+            </div>  
+          </div>
+        </div>
+      </div>    
+    </section>
+    <!-- End Purchase Section -->
+     
+    
+
+    
+    <!-- Clients Section -->
+    <section class="clients section">
+      <div class="container">
+        <h2 class="section-title">
+          Diversas categorias
+        </h2>
+        <div class="row"> 
+          <div id="clients-scroller">
+            <div class="items">
+              <img src="assets/img/clients/img1.png" alt=""/>
+            </div>
+            <div class="items">
+              <img src="assets/img/clients/img2.png" alt=""/>
+            </div>
+            <div class="items">
+              <img src="assets/img/clients/img3.png" alt=""/>
+            </div>
+            <div class="items">
+              <img src="assets/img/clients/img4.png" alt=""/>
+            </div>
+            <div class="items">
+              <img src="assets/img/clients/img5.png" alt=""/>
+            </div>
+            <div class="items">
+              <img src="assets/img/clients/img6.png" alt=""/>
+            </div>
+            <div class="items">
+              <img src="assets/img/clients/img6.png" alt=""/>
+            </div>
+            <div class="items">
+              <img src="assets/img/clients/img6.png" alt=""/>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Client Section End -->
+
+     
+    <footer>	
+    	<!-- Copyright Start  -->
+    	<div id="copyright">
+    		<div class="container">
+    			<div class="row">
+    				<div class="col-md-12">
+              <div class="site-info pull-left">
+                <p>Todos direitos reservados 2018 <a rel="nofollow" href="http://graygrids.com">E H Technology</a></p>
+              </div>   
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    	<!-- Copyright End -->
+
+    </footer>
+    <!-- Footer Section End -->  
+    
+    <!-- Go To Top Link -->
+    <a href="#" class="back-to-top">
+      <i class="ti-arrow-up"></i>
+    </a>
+
+    <div id="loading">
+      <div id="loading-center">
+        <div id="loading-center-absolute">
+          <div class="object" id="object_one"></div>
+          <div class="object" id="object_two"></div>
+          <div class="object" id="object_three"></div>
+          <div class="object" id="object_four"></div>
+          <div class="object" id="object_five"></div>
+          <div class="object" id="object_six"></div>
+          <div class="object" id="object_seven"></div>
+          <div class="object" id="object_eight"></div>
+        </div>
+      </div>
+    </div>
+        
+    <!-- Main JS  -->
+    <script type="text/javascript" src="assets/js/jquery-min.js"></script>      
+    <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>    
+    <script type="text/javascript" src="assets/js/material.min.js"></script>
+    <script type="text/javascript" src="assets/js/material-kit.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.parallax.js"></script>
+    <script type="text/javascript" src="assets/js/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.slicknav.js"></script>
+    <script type="text/javascript" src="assets/js/main.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.counterup.min.js"></script>
+    <script type="text/javascript" src="assets/js/waypoints.min.js"></script>
+    <script type="text/javascript" src="assets/js/jasny-bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap-select.min.js"></script>
+    <script type="text/javascript" src="assets/js/form-validator.min.js"></script>
+    <script type="text/javascript" src="assets/js/contact-form-script.js"></script>    
+    <script type="text/javascript" src="assets/js/jquery.themepunch.revolution.min.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.themepunch.tools.min.js"></script>
+    
+  </body>
+</html>

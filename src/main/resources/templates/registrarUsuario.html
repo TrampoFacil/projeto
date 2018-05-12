@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="layout/template-padrao">
+<head>
+</head>
+<body>
+
+		<section id="content" class='job-detail' layout:fragment="conteudo">
+			<div class="page-header"
+				style="background: url(assets/img/banner1.jpg);margin-top:-80px;margin-bottom:50px;">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="breadcrumb-wrapper">
+								<h2 class="product-title">Registrar</h2>
+								<ol class="breadcrumb">
+									<li><i class="ti-home"></i> Página inicial</li>
+									<li class="current">Registrar</li>
+								</ol>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="container" >
+				<div class="row">
+					<div class="col-md-8 col-xs-11 centered" >
+
+						<div class="page-ads box">
+							<form class="form-ad">
+								<div class="form-group">
+									<label class="control-label">Nome</label> 
+									<input type="text" class="form-control" placeholder="Nome"/>
+								</div>
+								<div class="form-group">
+									<label class="control-label">Sobrenome</label> 
+									<input type="text" class="form-control"/>
+								</div>
+								<div class="form-group">
+									<label class="control-label">Email </label> 
+									<input type="email" class="form-control" placeholder="email@email.com"/>
+								</div>
+								<div class="form-group">
+									<label class="control-label">Senha </label> 
+									<input type="password" class="form-control" placeholder="*******"/>
+								</div>
+								<div class="form-group">
+									<label class="control-label">Repita a senha </label> 
+									<input type="password" class="form-control" placeholder="*******"/>
+								</div>
+
+								<div class="form-group">
+									<label class="control-label" for="textarea">Tipo de
+										perfil </label>
+
+
+									<!-- RADIO BUTTONS BLOCK -->
+
+
+									<div class="frb-group" style="margin-top: -1px;">
+										<div class="frb frb-default">
+											<input type="radio" id="radio-button-0" name="radio-button" value="0"/> 
+											<label for="radio-button-0">
+												<span class="frb-title">Quero contratar</span> 
+													<span class="frb-description">
+														Você poderá criar uma oportunidade e selecionar seus freelancers.
+													</span>
+											</label>
+										</div>
+										<div class="frb frb-primary">
+											<input type="radio" id="radio-button-1" name="radio-button"
+												value="1"/> 
+												<label for="radio-button-1"> 
+												<span class="frb-title">Quero trabalhar</span> 
+													<span class="frb-description">
+														Você poderá cadastrar seu perfil e aplicar para uma vaga.
+													</span>
+											</label>
+										</div>
+
+									</div>
+
+
+
+
+								</div>
+								<div class="form-group">
+									<label class="control-label">Área de atuação</label>
+									<div class="search-category-container">
+										<label class="styled-select"> 
+										<select class="dropdown-product selectpicker">
+												<option>All Categories</option>
+												<option>Finance</option>
+												<option>IT e Engineering</option>
+												<option>Education/Training</option>
+												<option>Art/Design</option>
+												<option>Sale/Markting</option>
+												<option>Healthcare</option>
+												<option>Science</option>
+												<option>Food Services</option>
+										</select>
+										</label>
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label class="control-label">Habilidades</label> 
+									<textarea rows="3" class="form-control" placeholder="Ex:Desenhar,escrever.."></textarea>
+								</div>
+
+
+								<div class="form-group">
+									<div class="button-group">
+										<div class="action-buttons">
+											<div class="upload-button">
+												<button class="btn btn-common btn-sm">Browse</button>
+												<input id="cover_img_file" type="file"/>
+											</div>
+										</div>
+									</div>
+								</div>
+								<a href="#" class="btn btn-common">Cadastrar</a>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		
+		
+</body>
+</html>
