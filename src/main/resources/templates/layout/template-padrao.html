@@ -36,6 +36,7 @@
     <link rel="stylesheet" href="assets/css/responsive.css" type="text/css"/>
     <!-- Color CSS Styles  -->
     <link rel="stylesheet" type="text/css" href="assets/css/colors/red.css" media="screen" />
+    
 </head>
 <body>
 
@@ -109,7 +110,7 @@
 						<ul class="nav navbar-nav navbar-right float-right">
 							<li class="left"><a th:href="@{/registrar}"><i
 									class="ti-pencil-alt"></i> Registrar</a></li>
-							<li class="right"><a href="my-account.html"><i
+							<li class="right"><a th:href="@{/login}"><i
 									class="ti-lock"></i> Login</a></li>
 						</ul>
 					</div>
@@ -157,9 +158,9 @@
 							<li><a href="blog-full-width.html">Blog - Full Width</a></li>
 							<li><a href="single-post.html">Blog Single Post</a></li>
 						</ul></li>
-					<li class="btn-m"><a href="post-job.html"><i
+					<li class="btn-m"><a th:href="@{/registrar}"><i
 							class="ti-pencil-alt"></i> Registrar</a></li>
-					<li class="btn-m"><a href="my-account.html"><i
+					<li class="btn-m"><a th:href="@{/login}"><i
 							class="ti-lock"></i> Login</a></li>
 				</ul>
 

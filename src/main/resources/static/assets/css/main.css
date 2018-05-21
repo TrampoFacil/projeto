@@ -394,7 +394,7 @@ a:hover,a:focus{
     top:0;
     z-index:9999;
     box-shadow:0 0 3px rgba(0,0,0,.2);
-    background:#fff;
+    background:#171a2f;
     -webkit-animation-duration:1s;
     animation-duration:1s;
     -webkit-animation-fill-mode:both;
@@ -410,7 +410,7 @@ a:hover,a:focus{
 }
 .navbar-default.affix .navbar-nav>li>a,.navbar-default.affix .navbar-nav>li>a:focus{
     padding:10px 14px;
-    color:#444
+    color:#fff
 }
 .navbar-default.affix .side{
     padding:18px 0
@@ -588,10 +588,10 @@ a:hover,a:focus{
     margin-right:3px
 }
 .main-navigation{
-    background:#fff
+    background:#171a2f
 }
 .main-navigation .navbar-nav>li>a{
-    color:#444
+    color:#fff
 }
 .main-navigation .float-right li a{
     color:#ff4f57!important;
