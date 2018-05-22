@@ -753,7 +753,7 @@ nav#menu span.fa.fa-bars:hover{
 }
 .search-container h2{
     font-size:30px;
-    color:#ff4f57;
+    color:#fff;
     font-weight:400;
     margin-bottom:30px;
     letter-spacing:-1px
@@ -1224,7 +1224,7 @@ label{
     box-shadow:0 2px 4px 0 rgba(0,0,0,.18),0 2px 5px 0 rgba(0,0,0,.15)
 }
 .purchase{
-    background:#202020;
+    background:#ededed;
     padding:100px 0;
     background-attachment:absolute;
     background-position:50% 0
@@ -1543,8 +1543,7 @@ footer .menu li a:hover{
     overflow:hidden
 }
 #copyright{
-    background-color:#202020;
-    border-top:1px solid #000;
+    background-color:#171a2f;
     padding:20px 0 10px;
     color:#fff
 }
