@@ -6,6 +6,7 @@ body{
     line-height:24px;
     overflow-x:hidden;
     color:#444;
+    background:#f4f5f7;
   
 }
 /*h1,h2,h3,h4,h5,h6{
@@ -36,7 +37,7 @@ a{
     transition:all .3s linear
 }
 a:hover,a:focus{
-    color:#ff4f57
+    color:#337ab7
 }
 img{
     max-width:100%
@@ -60,11 +61,11 @@ a:hover,a:focus{
     text-align:center
 }
 ::selection{
-    background:#ff4f57;
+    background:#337ab7;
     color:#fff
 }
 ::-moz-selection{
-    background:#ff4f57;
+    background:#337ab7;
     color:#fff
 }
 .btn{
@@ -87,7 +88,7 @@ a:hover,a:focus{
     opacity:.8
 }
 .btn-common{
-    background-color:#ff4f57;
+    background-color:#337ab7;
     border:0;
     border-radius:4px;
     text-transform:uppercase;
@@ -96,7 +97,7 @@ a:hover,a:focus{
 }
 .btn-border{
     background:#fff;
-    color:#ff4f57;
+    color:#337ab7;
     text-transform:uppercase;
     border-radius:4px;
     overflow:hidden;
@@ -104,7 +105,7 @@ a:hover,a:focus{
     border:1px solid!important
 }
 .btn-border:hover{
-    color:#ff4f57;
+    color:#337ab7;
     box-shadow:0 1px 6px 0 rgba(0,0,0,.12),0 1px 6px 0 rgba(0,0,0,.12)
 }
 .btn-search{
@@ -145,7 +146,7 @@ a:hover,a:focus{
     padding:14px 22px;
     height:55px;
     font-size:22px;
-    background:#ff4f57;
+    background:#337ab7;
     color:#fff;
     width:65px;
     text-align:center
@@ -174,7 +175,7 @@ a:hover,a:focus{
     bottom:0;
     margin-left:0;
     margin-right:0;
-    border-bottom:2px solid #ff4f57
+    border-bottom:2px solid #337ab7
 }
 #content{
     padding:80px 0
@@ -203,7 +204,7 @@ a:hover,a:focus{
 }
 .breadcrumb{
     font-size:14px;
-    color:#ff4f57;
+    color:#337ab7;
     border-radius:0;
     background:0 0;
     padding:5px 0;
@@ -213,7 +214,7 @@ a:hover,a:focus{
     color:#fff
 }
 .breadcrumb a:hover{
-    color:#ff4f57
+    color:#337ab7
 }
 #loading{
     background-color:#fff;
@@ -419,11 +420,11 @@ a:hover,a:focus{
     margin-top:0
 }
 .navbar-default.affix .float-right li a{
-    color:#ff4f57!important;
-    border:1px solid #ff4f57
+    color:#337ab7!important;
+    border:1px solid #337ab7
 }
 .navbar-default.affix .float-right li a:hover{
-    background:#ff4f57;
+    background:#337ab7;
     color:#fff!important
 }
 .navbar{
@@ -476,7 +477,7 @@ a:hover,a:focus{
 }
 .navbar-default .navbar-nav>li:hover>a,.navbar-default .navbar-nav>li>a.active{
     color:#fff;
-    background-color:#ff4f57
+    background-color:#337ab7
 }
 .navbar-default .navbar-nav .dropdown{
     background:#fff;
@@ -514,10 +515,10 @@ a:hover,a:focus{
     opacity:1
 }
 .dropdown li a.active,.sup-dropdown li a.active{
-    color:#ff4f57
+    color:#337ab7
 }
 .dropdown>li:hover>a,.sup-dropdown li:hover>a{
-    color:#ff4f57
+    color:#337ab7
 }
 .dropdown li,.sup-dropdown li{
     position:relative
@@ -547,7 +548,7 @@ a:hover,a:focus{
     left:100%;
     top:0;
     border-radius:2px;
-    border-bottom:2px solid #ff4f57;
+    border-bottom:2px solid #337ab7;
     padding:12px;
     width:195px;
     background-color:#fff;
@@ -594,8 +595,8 @@ a:hover,a:focus{
     color:#fff
 }
 .main-navigation .float-right li a{
-    color:#ff4f57!important;
-    border:1px solid #ff4f57
+    color:#337ab7!important;
+    border:1px solid #337ab7
 }
 .main-navigation .float-right li a:hover{
     color:#fff!important
@@ -664,7 +665,7 @@ a:hover,a:focus{
     padding:10px;
     cursor:pointer;
     position:fixed;
-    background:#ff4f57;
+    background:#337ab7;
     z-index:999;
     top:124px;
     left:0
@@ -691,7 +692,7 @@ a:hover,a:focus{
 }
 .navmenu-default .navmenu-nav>li>a:hover,.navbar-default .navbar-offcanvas .navmenu-nav>li>a:hover,.navmenu-default .navmenu-nav>li>a:focus,.navbar-default .navbar-offcanvas .navmenu-nav>li>a:focus{
     color:#fff;
-    background-color:#ff4f57
+    background-color:#337ab7
 }
 .nav>li{
     position:relative;
@@ -704,10 +705,10 @@ a:hover,a:focus{
     border-bottom:1px solid #eee
 }
 nav#menu span.fa.fa-bars:hover{
-    color:#ff4f57
+    color:#337ab7
 }
 .navmenu-default .navmenu-nav>.active>a,.navbar-default .navbar-offcanvas .navmenu-nav>.active>a,.navmenu-default .navmenu-nav>.active>a:hover,.navbar-default .navbar-offcanvas .navmenu-nav>.active>a:hover,.navmenu-default .navmenu-nav>.active>a:focus,.navbar-default .navbar-offcanvas .navmenu-nav>.active>a:focus{
-    background:#ff4f57;
+    background:#337ab7;
     color:#fff
 }
 .close{
@@ -716,7 +717,7 @@ nav#menu span.fa.fa-bars:hover{
     opacity:1
 }
 .close i{
-    background:#ff4f57;
+    background:#337ab7;
     color:#fff;
     padding:8px;
     border-radius:50px;
@@ -783,8 +784,8 @@ nav#menu span.fa.fa-bars:hover{
     transition:all .2s ease-in-out
 }
 .popular-jobs a:hover{
-    background:#ff4f57;
-    border-color:#ff4f57;
+    background:#337ab7;
+    border-color:#337ab7;
     color:#fff
 }
 .section-intro .main-text{
@@ -973,20 +974,20 @@ label{
 .find-job .nav-tabs>li>a{
     padding:10px 15px;
     font-size:14px;
-    color:#ff4f57;
+    color:#337ab7;
     text-transform:uppercase;
-    border:1px solid #ff4f57!important;
+    border:1px solid #337ab7!important;
     border-radius:0;
     margin-right:10px;
     font-weight:700
 }
 .find-job .nav>li>a:focus,.find-job .nav>li>a:hover{
-    background-color:#ff4f57;
+    background-color:#337ab7;
     color:#fff
 }
 .find-job .nav-tabs>li.active>a,.find-job .nav-tabs>li.active>a:focus,.find-job .nav-tabs>li.active>a:hover{
     border-radius:0;
-    background:#ff4f57;
+    background:#337ab7;
     color:#fff
 }
 .find-job table td{
@@ -1036,7 +1037,7 @@ label{
     line-height:32px
 }
 .find-job .showing a span{
-    color:#ff4f57
+    color:#337ab7
 }
 .find-job .pagination>li>a,.find-job .pagination>li>span{
     margin-right:5px;
@@ -1047,7 +1048,7 @@ label{
     font-size:10px
 }
 .category{
-    background:#ff4f57
+    background:#337ab7
 }
 .category .section-title{
     color:#fff
@@ -1094,7 +1095,7 @@ label{
 .f-category .icon i{
     font-size:40px;
     padding:20px;
-    color:#ff4f57;
+    color:#337ab7;
     transform:scale(1);
     -moz-transform:scale(1);
     -webkit-transform:scale(1);
@@ -1118,7 +1119,7 @@ label{
     color:#444
 }
 .f-category h3 a:hover{
-    color:#ff4f57
+    color:#337ab7
 }
 .f-category p{
     color:#999
@@ -1174,7 +1175,7 @@ label{
     text-transform:uppercase
 }
 .featured-jobs .item-body .job-title a:hover{
-    color:#ff4f57
+    color:#337ab7
 }
 .featured-jobs .item-body .adderess{
     color:#999;
@@ -1194,7 +1195,7 @@ label{
     color:#999
 }
 .featured-jobs .item-foot a:hover{
-    color:#ff4f57
+    color:#337ab7
 }
 .featured-jobs .item-foot span{
     color:#999;
@@ -1214,7 +1215,7 @@ label{
 .featured-jobs .item-foot .view-iocn a{
     width:48px;
     display:block;
-    background:#ff4f57;
+    background:#337ab7;
     color:#fff;
     font-size:20px;
     height:48px;
@@ -1363,7 +1364,7 @@ label{
     height:40px;
     line-height:30px;
     display:block!important;
-    background:#ff4f57!important;
+    background:#337ab7!important;
     text-align:center;
     display:inline-block;
     opacity:1!important;
@@ -1404,7 +1405,7 @@ label{
     margin-bottom:25px
 }
 .counting .icon i{
-    color:#ff4f57;
+    color:#337ab7;
     font-size:42px
 }
 .counting .desc h2{
@@ -1415,7 +1416,7 @@ label{
     margin-bottom:20px
 }
 .counting .desc h2:after{
-    background:#ff4f57;
+    background:#337ab7;
     bottom:0;
     content:"";
     height:2px;
@@ -1430,7 +1431,7 @@ label{
     line-height:39px
 }
 .counting:hover span{
-    background:#ff4f57;
+    background:#337ab7;
     -webkit-transform:scale(1.1,1.1);
     -moz-transform:scale(1.1,1.1);
     -ms-transform:scale(1.1,1.1);
@@ -1438,7 +1439,7 @@ label{
     transform:scale(1.1,1.1)
 }
 .infobox{
-    background:#ff4f57
+    background:#337ab7
 }
 .infobox .info-text{
     float:left;
@@ -1494,7 +1495,7 @@ footer .menu li a{
     padding:0
 }
 footer .menu li a:hover{
-    color:#ff4f57
+    color:#337ab7
 }
 .subscribe-box{
     margin-top:18px
@@ -1516,7 +1517,7 @@ footer .menu li a:hover{
     text-decoration:none;
     color:#fff;
     font-size:12px;
-    background:#ff4f57;
+    background:#337ab7;
     text-transform:uppercase;
     border:0;
     padding:7px 16px;
@@ -1536,7 +1537,7 @@ footer .menu li a:hover{
     line-height:44px;
     margin-right:5px;
     border-radius:50px;
-    background:#ff4f57;
+    background:#337ab7;
     display:inline-block;
     height:42px;
     position:relative;
@@ -1554,7 +1555,7 @@ footer .menu li a:hover{
     color:#fff
 }
 #copyright p a:hover{
-    color:#ff4f57
+    color:#337ab7
 }
 .social-icon .facebook:hover{
     background-color:#3b5998
@@ -1592,7 +1593,7 @@ footer{
 .widget-title:before{
     content:"";
     position:absolute;
-    border-bottom:3px solid #ff4f57;
+    border-bottom:3px solid #337ab7;
     width:50px;
     bottom:-1px;
     left:0
@@ -1601,7 +1602,7 @@ footer{
     display:inline-block;
     margin-right:15px;
     font-size:16px;
-    color:#ff4f57
+    color:#337ab7
 }
 .widget-title h4{
     font-size:16px;
@@ -1625,7 +1626,7 @@ footer{
     border-bottom:1px solid #eee
 }
 .categories-list ul li a:hover{
-    color:#ff4f57
+    color:#337ab7
 }
 .categories-list ul li a i{
     margin-right:5px
@@ -1657,7 +1658,7 @@ footer{
     color:#999
 }
 .all-categories ul li a:hover{
-    color:#ff4f57
+    color:#337ab7
 }
 .pagination-bar{
     padding-bottom:35px;
@@ -1676,12 +1677,12 @@ footer{
     border-radius:0
 }
 .pagination .active>a,.pagination .active>a:focus,.pagination>.active>a:hover,.pagination>.active>span,.pagination>.active>span:focus,.pagination>.active>span:hover{
-    background-color:#ff4f57!important;
-    border-color:#ff4f57!important
+    background-color:#337ab7!important;
+    border-color:#337ab7!important
 }
 .pagination>li>a:focus,.pagination>li>a:hover,.pagination>li>span:focus,.pagination>li>span:hover{
-    background:#ff4f57;
-    border-color:#ff4f57;
+    background:#337ab7;
+    border-color:#337ab7;
     color:#fff
 }
 .pagination>.active>a,.pagination>.active>a:focus,.pagination>.active>a:hover,.pagination>.active>span,.pagination>.active>span:focus,.pagination>.active>span:hover{
@@ -1723,7 +1724,7 @@ footer{
 .service-item .icon-wrapper i{
     display:block;
     margin:0 auto;
-    color:#ff4f57
+    color:#337ab7
 }
 .service-item h2{
     font-size:16px;
@@ -1811,7 +1812,7 @@ footer{
     color:#999
 }
 .job-detail .text-left .meta span i{
-    color:#ff4f57;
+    color:#337ab7;
     margin-right:3px
 }
 .job-detail .text-left .price{
@@ -1823,7 +1824,7 @@ footer{
 .job-detail .text-left .price i{
     font-size:15px;
     margin-right:10px;
-    color:#ff4f57
+    color:#337ab7
 }
 .job-detail .text-left .btn{
     margin-right:20px
@@ -1853,7 +1854,7 @@ footer{
     left:0;
     top:4px;
     margin-right:5px;
-    color:#ff4f57
+    color:#337ab7
 }
 .job-detail .sidebar .thumb{
     width:100%;
@@ -1865,7 +1866,7 @@ footer{
     margin:0 0 12px
 }
 .job-detail .sidebar .text-box h4 a{
-    color:#ff4f57
+    color:#337ab7
 }
 .job-detail .sidebar .text-box p{
     color:#888;
@@ -1878,7 +1879,7 @@ footer{
 }
 .job-detail .sidebar .text-box a.text i{
     margin-right:5px;
-    color:#ff4f57
+    color:#337ab7
 }
 .job-detail .sidebar .text-box strong.price{
     color:#666;
@@ -1888,7 +1889,7 @@ footer{
 }
 .job-detail .sidebar .text-box strong.price i{
     margin-right:5px;
-    color:#ff4f57
+    color:#337ab7
 }
 .job-detail .sidebar .sidebar-jobs ul li{
     display:block;
@@ -1909,7 +1910,7 @@ footer{
 }
 .job-detail .sidebar .sidebar-jobs ul li span i{
     margin-right:5px;
-    color:#ff4f57
+    color:#337ab7
 }
 .detail-company{
     padding:30px;
@@ -2030,7 +2031,7 @@ footer{
     color:#999
 }
 .job-list .job-tag .meta-tag span a:hover{
-    color:#ff4f57
+    color:#337ab7
 }
 .job-list .job-tag .meta-tag span i{
     margin-right:5px
@@ -2045,7 +2046,7 @@ footer{
     text-align:center;
     margin-right:18px;
     background:#f1f1f1;
-    color:#ff4f57;
+    color:#337ab7;
     font-size:16px
 }
 .right-sideabr h4{
@@ -2066,16 +2067,16 @@ footer{
     color:#888
 }
 .right-sideabr .lest li a:hover{
-    color:#ff4f57
+    color:#337ab7
 }
 .right-sideabr .lest li a.active{
-    color:#ff4f57
+    color:#337ab7
 }
 .right-sideabr .lest .notinumber{
     float:right;
     width:24px;
     height:24px;
-    background:#ff4f57;
+    background:#337ab7;
     text-align:center;
     border-radius:50px;
     color:#fff
@@ -2189,7 +2190,7 @@ footer{
     margin-bottom:20px
 }
 .post-header a{
-    color:#ff4f57
+    color:#337ab7
 }
 .add-post-btn{
     width:100%;
@@ -2294,7 +2295,7 @@ footer{
     color:#818a91
 }
 .manager-resumes-item .btn-gray:hover{
-    color:#ff4f57
+    color:#337ab7
 }
 .manager-resumes-item .btn-danger{
     background-color:#ef4d42!important
@@ -2449,7 +2450,7 @@ fieldset p{
 }
 #pricing-table .table .pricing-header .price-value{
     font-size:52px;
-    color:#ff4f57;
+    color:#337ab7;
     position:relative;
     text-align:center;
     font-weight:700;
@@ -2483,7 +2484,7 @@ fieldset p{
     -moz-box-shadow:0 13px 21px rgba(0,0,0,.13)
 }
 #pricing-table .table:hover .pricing-header{
-    background:#ff4f57
+    background:#337ab7
 }
 #pricing-table .table:hover .pricing-header .price-value{
     color:#fff
@@ -2497,7 +2498,7 @@ fieldset p{
     -moz-box-shadow:0 13px 21px rgba(0,0,0,.13)
 }
 #pricing-table #active-tb .pricing-header{
-    background:#ff4f57
+    background:#337ab7
 }
 #pricing-table #active-tb .pricing-header .price-value{
     color:#fff
@@ -2538,7 +2539,7 @@ fieldset p{
     border-bottom:1px solid #eee
 }
 .user-panel-sidebar ul li a:hover,.user-panel-sidebar ul li a:active,.user-panel-sidebar ul li.active a{
-    background-color:#ff4f57;
+    background-color:#337ab7;
     color:#fff
 }
 .user-panel-sidebar ul li a:hover .badge,.user-panel-sidebar ul li a:focus .badge,.user-panel-sidebar ul li.active a .badge{
@@ -2582,7 +2583,7 @@ table.add-manage-table>tbody>tr>td,table.add-manage-table>tbody>tr>th{
 }
 .table>thead>tr>th{
     border-bottom:0;
-    color:#ff4f57
+    color:#337ab7
 }
 .ads-details-td h4{
     font-size:15px;
@@ -2657,7 +2658,7 @@ table.add-manage-table>tbody>tr>td,table.add-manage-table>tbody>tr>th{
     font-size:14px;
     text-align:center;
     border-radius:50px;
-    background-color:#ff4f57;
+    background-color:#337ab7;
     -webkit-transition:all .2s linear;
     -moz-transition:all .2s linear;
     -o-transition:all .2s linear;
@@ -2728,7 +2729,7 @@ table.add-manage-table>tbody>tr>td,table.add-manage-table>tbody>tr>th{
     color:#999
 }
 .blog-post .post-content .meta .meta-part a:hover{
-    color:#ff4f57
+    color:#337ab7
 }
 .blog-post .post-content .meta .meta-part i{
     margin-right:5px
@@ -2873,7 +2874,7 @@ table.add-manage-table>tbody>tr>td,table.add-manage-table>tbody>tr>th{
     font-size:12px;
     color:#fff;
     padding:7px 12px;
-    background:#ff4f57;
+    background:#337ab7;
     margin:4px 2px;
     border-radius:50px;
     transition:all .4s ease-in-out;
@@ -2890,7 +2891,7 @@ table.add-manage-table>tbody>tr>td,table.add-manage-table>tbody>tr>th{
 blockquote{
     border-left:0;
     padding:30px;
-    background:#ff4f57
+    background:#337ab7
 }
 blockquote .quote-text{
     font-size:20px;
@@ -2948,7 +2949,7 @@ blockquote p a:hover{
     padding-left:85px
 }
 .reply-link{
-    color:#ff4f57;
+    color:#337ab7;
     border-radius:0;
     font-size:14px;
     -webkit-transition:all .4s ease;
@@ -3009,8 +3010,8 @@ blockquote p a:hover{
     padding:0 30px;
     outline:0;
     border-radius:0;
-    background:#ff4f57!important;
-    border:1px solid #ff4f57;
+    background:#337ab7!important;
+    border:1px solid #337ab7;
     width:100%;
     box-shadow:none
 }
@@ -3298,7 +3299,7 @@ blockquote p a:hover{
     margin-bottom:4px
 }
 .dropdown-menu li a:hover,.dropdown-menu li a:focus,.dropdown-menu li a:active{
-    background-color:#ff4f57;
+    background-color:#337ab7;
     color:#fff;
     border-radius:0
 }
