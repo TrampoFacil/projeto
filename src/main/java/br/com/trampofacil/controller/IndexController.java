@@ -12,16 +12,19 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import br.com.trampofacil.model.Usuario;
 import br.com.trampofacil.repository.RoleRepository;
+import br.com.trampofacil.service.UsuarioService;
 
 
 @Controller
-@RequestMapping("/")
 public class IndexController {
 	
 	@Autowired
 	RoleRepository roleRepositorio;
 	
-	@RequestMapping()
+	@Autowired
+	UsuarioService usuarioservice;
+	
+	@RequestMapping(value="/")
 	public ModelAndView paginaPrincipal() {
 		ModelAndView mav = new ModelAndView("index");
 		return mav;
@@ -41,7 +44,7 @@ public class IndexController {
 		return mav;
 	}
 	
-	@RequestMapping(value="/registrar/salvar",method = RequestMethod.POST)
+	@RequestMapping(value="/registrar",method = RequestMethod.POST)
 	public ModelAndView salvar(@Valid Usuario usuario, BindingResult result, RedirectAttributes attributes) {
 		ModelAndView mav;
 		
@@ -51,17 +54,26 @@ public class IndexController {
 			mav.addObject(usuario);
 			return mav;
 		}
-		//Não encontrou erros
-
-		System.out.println("Usuário não existe, criando...");
-		System.out.println(usuario.getNome());
-		System.out.println(usuario.getSobrenome());
-		System.out.println(usuario.getEmail());
-		System.out.println(usuario.getSenha());
+		boolean statussalvar = usuarioservice.salvar(usuario);
 		
-		return new ModelAndView("redirect:/login");
-
+		//Se true nao existe usuario cadasraso, se nao usuario ja ta cadastrado com mesmo email(login)
+		if (statussalvar == true) {
+				
+				System.out.println("Usuário não existe, criando...");
+				System.out.println(usuario.getNome());
+				System.out.println(usuario.getSobrenome());
+				System.out.println(usuario.getEmail());
+				System.out.println(usuario.getSenha());
+				attributes.addFlashAttribute("mensagem", "Usuário registrado, favor para ter acesso faça login.");
+				mav = new ModelAndView("redirect:/login");
+				return mav;
 		
-	}
+		}else {
+			mav = new ModelAndView("autenticacao/registrarUsuario");
+			mav.addObject("mensagem", "Email já cadastrado");
+			mav.addObject(usuario);
+			return mav;
+		}
 	
+	}
 }

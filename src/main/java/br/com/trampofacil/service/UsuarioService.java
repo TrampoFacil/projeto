@@ -16,6 +16,9 @@ public class UsuarioService implements UserDetailsService{
 	@Autowired
 	private UsuarioRepository usuarioRepository;
 	
+	@Autowired
+	CryptService cryptService;
+	
 	@Override
 	public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
 		Usuario usuario = usuarioRepository.findByEmail(email);
@@ -23,6 +26,16 @@ public class UsuarioService implements UserDetailsService{
 			throw new UsernameNotFoundException("Usuário não encontrado");
 		}
 		return usuario;
+	}
+	
+	public boolean salvar(Usuario usuario) {
+		if(usuario.getId()==null) {
+			usuario.setSenha(cryptService.encriptar(usuario.getSenha()));	
+			usuarioRepository.save(usuario);
+			return true;
+		}else {
+			return false;
+		}
 	}
 
 }

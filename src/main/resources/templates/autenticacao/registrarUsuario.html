@@ -18,28 +18,33 @@
 						<h3 style="color:#888" align="left">Cadastre-se </h3>
 						<p style="color:#888; margin-top:-10px;margin-bottom:10px;" align="left">Para aplicar ou criar uma oportunidade</p>
 						<hr></hr>
-						<form class="form-ad" th:object="${usuario}" method="POST" id="registrarUsuario" th:action="@{/registrar/salvar}">
+						<form class="form-ad" th:object="${usuario}" method="POST" id="registrarUsuario" data-toggle="validator"
+							th:action="@{/registrar}">
 							<input th:type="hidden" th:field="*{id}"/>
 							<div class="form-group">
 								<label class="control-label">Nome</label> <input type="text"
-									class="form-control" id="nome" name="nome" th:field="*{nome}" placeholder="Nome" />
+									class="form-control" id="nome" name="nome" th:field="*{nome}" required="true"  placeholder="Nome"/>
 							</div>
 							<div class="form-group">
 								<label class="control-label">Sobrenome</label> <input
-									type="text" class="form-control"  id="sobrenome" name="sobrenome" th:field="*{sobrenome}" />
+									type="text" class="form-control"  id="sobrenome"  name="sobrenome"  required="true"  th:field="*{sobrenome}"/>
 							</div>
 							<div class="form-group">
 								<label class="control-label">Email </label> <input type="email"
-									class="form-control" id="email" name="email" th:field="*{email}" placeholder="email@email.com" />
+									class="form-control" id="email"  name="email" th:field="*{email}" required="true"  placeholder="email@email.com"/>
 							</div>
 							<div class="form-group">
 								<label class="control-label">Senha </label> <input
-									type="password" class="form-control"  id="senhaNaoverificada" name="senhaNaoverificada" placeholder="*******" />
+									type="password" class="form-control"  id="senhaNaoverificada" 
+									name="senhaNaoverificada"  placeholder="*******"  required="true"  data-minlength="6"/>
+									<span class="help-block">Mínimo de seis (6) digitos</span>
 							</div>
 							<div class="form-group">
 								<label class="control-label">Repita a senha </label> <input
 									type="password" id="senha" name="senha" class="form-control" placeholder="*******" 
-									data-match="#senhaNaoverificada" data-match-error="Senhas não conferem." th:field="*{senha}" />
+									data-match="#senhaNaoverificada" data-match-error="Atenção! As senhas não estão iguais." required="true" 
+									th:field="*{senha}" 
+									/>
 							</div>
 
 							<div class="form-group">
