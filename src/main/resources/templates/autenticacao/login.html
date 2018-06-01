@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html xmlns="http://www.w3.org/1999/xhml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 <head>
 
 <meta charset="utf-8" />
@@ -177,6 +179,11 @@ body {
 <body>
 	<section layout:fragment="conteudo">
 		<div class="login-form">
+			<div class="alert alert-success alert-dismissable"
+						th:if="${!#strings.isEmpty(mensagem)}">
+						<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;
+						</a> <span th:text="${mensagem}"> </span>
+			</div>
 			<form action="/examples/actions/confirmation.php" method="post">
 				<div class="avatar">
 					<img src="/assets/img/avatar.svg" alt="Avatar" />

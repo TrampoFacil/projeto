@@ -13,7 +13,12 @@
 				
 			<div class="row">
 				<div class="col-md-8 col-xs-11 centered" >
-					
+					<div class="alert alert-danger alert-dismissable"
+						th:if="${!#strings.isEmpty(mensagem)}">
+						<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;
+						</a> <span th:text="${mensagem}"> </span>
+					</div>
+
 					<div class="page-ads box" style="background:#fff">
 						<h3 style="color:#888" align="left">Cadastre-se </h3>
 						<p style="color:#888; margin-top:-10px;margin-bottom:10px;" align="left">Para aplicar ou criar uma oportunidade</p>
@@ -22,51 +27,57 @@
 							th:action="@{/registrar}">
 							<input th:type="hidden" th:field="*{id}"/>
 							<div class="form-group">
-								<label class="control-label">Nome</label> <input type="text"
+								<label class="control-label" for="nome">Nome</label> <input type="text"
 									class="form-control" id="nome" name="nome" th:field="*{nome}" required="true"  placeholder="Nome"/>
+									<div class="help-block with-errors"></div>
 							</div>
 							<div class="form-group">
-								<label class="control-label">Sobrenome</label> <input
-									type="text" class="form-control"  id="sobrenome"  name="sobrenome"  required="true"  th:field="*{sobrenome}"/>
+								<label class="control-label" for="sobrenome">Sobrenome</label> <input
+									type="text" class="form-control"  placeholder="Sobrenome" 
+									id="sobrenome"  name="sobrenome"  required="true"  th:field="*{sobrenome}"/>
+								<div class="help-block with-errors"></div>
 							</div>
-							<div class="form-group">
-								<label class="control-label">Email </label> <input type="email"
+							<div class="form-group" th:classappend="${#fields.hasErrors('email')} ? 'has-error'">
+								<label class="control-label" for="email">Email </label> <input type="email"
 									class="form-control" id="email"  name="email" th:field="*{email}" required="true"  placeholder="email@email.com"/>
+								<div class="help-block with-errors"></div>
+								<small th:if="${#fields.hasErrors('email')}" th:errors="*{email}"
+								style="margin-top: 30px; color: red;"></small>
 							</div>
 							<div class="form-group">
-								<label class="control-label">Senha </label> <input
+								<label class="control-label" for="senhaNaoverificada">Senha </label> <input
 									type="password" class="form-control"  id="senhaNaoverificada" 
 									name="senhaNaoverificada"  placeholder="*******"  required="true"  data-minlength="6"/>
 									<span class="help-block">Mínimo de seis (6) digitos</span>
 							</div>
 							<div class="form-group">
-								<label class="control-label">Repita a senha </label> <input
-									type="password" id="senha" name="senha" class="form-control" placeholder="*******" 
+								<label class="control-label" for="repitasenha">Repita a senha </label> <input
+									type="password" id="repitasenha" name="repitasenha" class="form-control" placeholder="*******" 
 									data-match="#senhaNaoverificada" data-match-error="Atenção! As senhas não estão iguais." required="true" 
 									th:field="*{senha}" 
 									/>
+									<div class="help-block with-errors"></div>
 							</div>
 
 							<div class="form-group">
-								<label class="control-label" for="textarea">Tipo de
-									perfil </label>
+								<label class="control-label" for="textarea">O que você desejar fazer? </label>
 
 
-								<!-- RADIO BUTTONS BLOCK -->
+								
 
 
 <!-- 								<div class="frb-group" style="margin-top: -1px;"> -->
 <!-- 									<div class="frb frb-default"> -->
-<!-- 										<input type="checkbox" id="radio-button-0" name="radio-button" -->
-<!-- 											value="0" /> <label for="radio-button-0"> <span -->
+<!-- 										<input type="checkbox" id="contratante" name="contratante" -->
+<!-- 											value="contratante" /> <label for="contratante"> <span -->
 <!-- 											class="frb-title">Quero contratar</span> <span -->
 <!-- 											class="frb-description"> Você poderá criar uma -->
 <!-- 												oportunidade e selecionar seus freelancers. </span> -->
 <!-- 										</label> -->
 <!-- 									</div> -->
 <!-- 									<div class="frb frb-primary"> -->
-<!-- 										<input type="checkbox" id="radio-button-1" name="radio-button" -->
-<!-- 											value="1" /> <label for="radio-button-1"> <span -->
+<!-- 										<input type="checkbox" id="contratado" name="contratado" -->
+<!-- 											value="contratado" /> <label for="contratado"> <span -->
 <!-- 											class="frb-title">Quero trabalhar</span> <span -->
 <!-- 											class="frb-description"> Você poderá cadastrar seu -->
 <!-- 												perfil e aplicar para uma vaga. </span> -->
@@ -74,7 +85,15 @@
 <!-- 									</div> -->
 
 <!-- 								</div> -->
+								<select required="true" th:type="text"
+									class="form-control dropdown-product selectpicker"
+									th:field="*{roles}">
+									<option value="">Selecione</option>
+									<option th:each="roleTipo : ${roles}"
+										th:text="${#strings.substring(roleTipo.tipo,5)}"
+										th:value="${roleTipo.tipo}"></option>
 
+								</select>
 
 
 							</div>

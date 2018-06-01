@@ -1,5 +1,6 @@
 package br.com.trampofacil.model;
 
+import javax.persistence.Transient;
 import java.io.Serializable;
 import java.util.Collection;
 import java.util.List;
@@ -41,6 +42,11 @@ public class Usuario implements UserDetails,Serializable {
 	@NotEmpty(message = "Informe a senha do usuário")
 	private String senha;
 	
+	@Transient
+	private String contratante;
+	
+	@Transient
+	private String contratado;
 	
 	@ManyToMany(fetch= FetchType.EAGER)
 	@JoinTable(name="usuario_roles", joinColumns=@JoinColumn(name="usuario_id", referencedColumnName="id"),
@@ -52,6 +58,19 @@ public class Usuario implements UserDetails,Serializable {
 	}
 	public void setRoles(List<Role> roles) {
 		this.roles = roles;
+	}
+	
+	public String getContratante() {
+		return contratante;
+	}
+	public void setContratante(String contratante) {
+		this.contratante = contratante;
+	}
+	public String getContratado() {
+		return contratado;
+	}
+	public void setContratado(String contratado) {
+		this.contratado = contratado;
 	}
 	public Integer getId() {
 		return id;

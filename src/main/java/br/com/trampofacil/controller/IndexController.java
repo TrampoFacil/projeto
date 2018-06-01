@@ -54,16 +54,11 @@ public class IndexController {
 			mav.addObject(usuario);
 			return mav;
 		}
-		boolean statussalvar = usuarioservice.salvar(usuario);
+		boolean statussalvar = usuarioservice.salvar(usuario,result);
 		
 		//Se true nao existe usuario cadasraso, se nao usuario ja ta cadastrado com mesmo email(login)
 		if (statussalvar == true) {
 				
-				System.out.println("Usuário não existe, criando...");
-				System.out.println(usuario.getNome());
-				System.out.println(usuario.getSobrenome());
-				System.out.println(usuario.getEmail());
-				System.out.println(usuario.getSenha());
 				attributes.addFlashAttribute("mensagem", "Usuário registrado, favor para ter acesso faça login.");
 				mav = new ModelAndView("redirect:/login");
 				return mav;
@@ -71,6 +66,7 @@ public class IndexController {
 		}else {
 			mav = new ModelAndView("autenticacao/registrarUsuario");
 			mav.addObject("mensagem", "Email já cadastrado");
+			mav.addObject("roles",roleRepositorio.findAll());
 			mav.addObject(usuario);
 			return mav;
 		}
