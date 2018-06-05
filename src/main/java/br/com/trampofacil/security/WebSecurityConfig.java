@@ -20,15 +20,17 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
 	
 	@Override
 	protected void configure(HttpSecurity http) throws Exception{
-		http.csrf().disable().authorizeRequests()
+		http.authorizeRequests()
 		.antMatchers("/").permitAll()
 		.antMatchers("/**").permitAll()
 		.antMatchers("/cadastrarEvento").hasRole("ADMIN")
 		.antMatchers("/cadastrarEvento").hasRole("ADMIN")
 		.anyRequest().
 		 authenticated().and().formLogin().loginPage("/login").permitAll()		
-		.successForwardUrl("/index").and().logout().logoutRequestMatcher(new AntPathRequestMatcher("/sair"))
+		.defaultSuccessUrl("/painel").and().logout().logoutRequestMatcher(new AntPathRequestMatcher("/sair"))
 		.logoutSuccessUrl("/?logoutSuccess").permitAll();
+		
+		http.csrf().disable();
 	}
 	
 	@Override

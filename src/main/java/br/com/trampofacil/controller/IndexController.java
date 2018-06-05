@@ -5,6 +5,7 @@ import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
@@ -24,17 +25,21 @@ public class IndexController {
 	@Autowired
 	UsuarioService usuarioservice;
 	
-	@RequestMapping(value="/")
+	@GetMapping(value="/")
 	public ModelAndView paginaPrincipal() {
 		ModelAndView mav = new ModelAndView("index");
 		return mav;
 	}
 	
+	
+	
 	@RequestMapping(value="/login")
-	public ModelAndView login() {
+	public ModelAndView paginaLogin() {
 		ModelAndView mav = new ModelAndView("autenticacao/login");
 		return mav;
 	}
+	
+	
 	
 	@RequestMapping(value="/registrar")
 	public ModelAndView registrar(Usuario usuario) {

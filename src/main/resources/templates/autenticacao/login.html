@@ -180,14 +180,17 @@ body {
 	<section layout:fragment="conteudo">
 		<div class="login-form">
 			<div class="alert alert-success alert-dismissable"
-						th:if="${!#strings.isEmpty(mensagem)}">
-						<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;
-						</a> <span th:text="${mensagem}"> </span>
+				th:if="${!#strings.isEmpty(mensagem)}">
+				<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;
+				</a> <span th:text="${mensagem}"> </span>
 			</div>
-			<form action="/examples/actions/confirmation.php" method="post">
+			
+				
+			<form th:action="@{/login}" method="POST">
 				<div class="avatar">
 					<img src="/assets/img/avatar.svg" alt="Avatar" />
 				</div>
+				
 				<h2 class="text-center">Login</h2>
 				<div class="social-btn text-center">
 					<a href="#" class="btn btn-primary btn-block btn-lg"><i
@@ -195,6 +198,9 @@ body {
 				</div>
 				<div class="or-seperator">
 					<i>ou</i>
+				</div>
+				<div class="text-danger" align="center" style="margin-bottom:10px;" th:if="${#bools.isTrue(param.error)}">
+					Usuário e/ou senha incorretos
 				</div>
 				<div class="form-group">
 					<input type="text" class="form-control" name="username"

@@ -40,7 +40,9 @@ public class UsuarioService implements UserDetailsService{
 	}
 	
 	public boolean salvar(Usuario usuario,BindingResult result) {
+		
 		if(usuario.getId()==null) {
+		
 			if (usuarioRepository.findByEmail(usuario.getEmail()) != null) {			
 				result.rejectValue("email","emailMessageCode","Erro ao cadastrar: Email já cadastrado. ");
 				return false;
