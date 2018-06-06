@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhml"
+  	  xmlns:th="http://www.thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head th:replace="/layoutLogin/fragments/headerinc :: headerinc"></head>
+
+<body>
+
+
+	<section layout:fragment="conteudo" class="section"> </section>
+	
+	<footer th:replace="/layoutLogin/fragments/footer :: footer"></footer>
+
+	<script	th:src="@{/vendors/jquery/jquery-3.1.1.min.js}"></script>
+	<script th:src="@{/vendors/bootstrap/bootstrap.min.js}"></script>
+	
+
+</body>
+</html>
