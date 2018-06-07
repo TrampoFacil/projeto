@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="layoutLogin/template-login">
+
+<body>
+	<section id="login" layout:fragment="conteudo">
+		<div class="login-form">
+
+			<div class="alert alert-success" role="alert" th:text="${msgSucess}"
+				th:if="${not #strings.isEmpty(msgSucess)}"></div>
+
+			<div class="alert alert-danger" role="alert"
+				th:if="${not #strings.isEmpty(msgError)}">
+				<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;
+				</a> <span th:text="${msgError}"></span>
+			</div>
+
+			<form th:action="@{/resetar/enviar}" method="POST">
+				
+				<div class="avatar">
+					<img src="https://2b493106a23a64602e04-eac45106fdbdfcf754476c49e4dc7196.ssl.cf2.rackcdn.com/splashid-icon.png" alt="Avatar" />
+				</div>
+				<h2 class="text-center">Resetar senha</h2>
+				
+				
+
+				<div class="form-group  has-feedback"
+					th:classappend="${not #strings.isEmpty(msgError)} ? 'has-error'">
+					<input id="emailReset" name="emailReset"
+						placeholder="email@email.com" class="form-control input-md"
+						type="text" th:value="${emailReset}" />
+				</div>
+
+				<div class="form-group">
+					<button type="submit"
+						class="btn btn-primary btn-lg btn-block login-btn">Recuperar</button>
+				</div>
+				
+			</form>
+			
+		</div>
+	</section>
+</body>
+</html>

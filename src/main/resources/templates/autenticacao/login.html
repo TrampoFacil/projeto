@@ -13,7 +13,11 @@
 				</a> <span th:text="${mensagem}"> </span>
 			</div>
 
-
+			<div class="alert alert-success alert-dismissable form-group"
+				role="alert" th:if="${not #strings.isEmpty(msgEmailEnviado)}">
+				<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;
+				</a> <span th:text="${msgEmailEnviado}"> </span>
+			</div>
 			<form th:action="@{/login}" method="POST">
 				<div class="avatar">
 					<img src="/assets/img/avatar.svg" alt="Avatar" />
@@ -43,7 +47,7 @@
 						class="btn btn-primary btn-lg btn-block login-btn">Entrar</button>
 				</div>
 				<p class="text-center small">
-					<a href="#">Esqueceu a senha?</a>
+					<a th:href="@{/resetar}">Esqueceu a senha?</a>
 				</p>
 			</form>
 			<p class="text-center small">

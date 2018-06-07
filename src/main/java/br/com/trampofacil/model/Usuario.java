@@ -42,6 +42,8 @@ public class Usuario implements UserDetails,Serializable {
 	@NotEmpty(message = "Informe a senha do usuário")
 	private String senha;
 	
+	private Integer resetada = 0;
+	
 	@Transient
 	private String contratante;
 	
@@ -53,6 +55,7 @@ public class Usuario implements UserDetails,Serializable {
 	inverseJoinColumns=@JoinColumn(name="role_id",referencedColumnName="tipo"))
 	private List<Role> roles;
 	
+	
 	public List<Role> getRoles() {
 		return roles;
 	}
@@ -60,6 +63,14 @@ public class Usuario implements UserDetails,Serializable {
 		this.roles = roles;
 	}
 	
+	
+	
+	public Integer isResetada() {
+		return resetada;
+	}
+	public void setResetada(Integer resetada) {
+		this.resetada = resetada;
+	}
 	public String getContratante() {
 		return contratante;
 	}
