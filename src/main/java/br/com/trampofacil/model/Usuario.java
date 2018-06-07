@@ -42,7 +42,7 @@ public class Usuario implements UserDetails,Serializable {
 	@NotEmpty(message = "Informe a senha do usuário")
 	private String senha;
 	
-	private Integer resetada = 0;
+	private boolean resetada = false;
 	
 	@Transient
 	private String contratante;
@@ -65,10 +65,10 @@ public class Usuario implements UserDetails,Serializable {
 	
 	
 	
-	public Integer isResetada() {
+	public boolean isResetada() {
 		return resetada;
 	}
-	public void setResetada(Integer resetada) {
+	public void setResetada(boolean resetada) {
 		this.resetada = resetada;
 	}
 	public String getContratante() {

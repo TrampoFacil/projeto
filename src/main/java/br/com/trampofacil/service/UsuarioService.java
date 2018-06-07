@@ -1,9 +1,5 @@
 package br.com.trampofacil.service;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Date;
-import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -12,7 +8,6 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import org.springframework.validation.BindingResult;
 
-import br.com.trampofacil.model.Role;
 import br.com.trampofacil.model.Usuario;
 import br.com.trampofacil.repository.RoleRepository;
 import br.com.trampofacil.repository.UsuarioRepository;
@@ -54,6 +49,12 @@ public class UsuarioService implements UserDetailsService{
 		}else {
 			return false;
 		}
+	}
+	
+	public Usuario procurarPorEmail(String email) {
+		
+		return usuarioRepository.findByEmail(email); 	
+		
 	}
 
 }

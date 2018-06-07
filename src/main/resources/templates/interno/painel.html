@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	xmlns:sec="http://www.springframework.org/security/tags"
+	layout:decorator="layout/template-padrao">
+
+<body>
+
+	<section id="content" layout:fragment="conteudo" sec:authorize="isAuthenticated()">
+
+		<div class="container" >
+	
+		</div>
+	</section>
+
+
+
+</body>
+</html>
