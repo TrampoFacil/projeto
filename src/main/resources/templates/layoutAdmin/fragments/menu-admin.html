@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.springframework.org/security/tags"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<div th:fragment="menu-admin" class="collapse navbar-collapse"
+	id="navbar" sec:authorize="isAuthenticated()"
+	th:unless="${session.hs_usuario == null}">
+
+	<ul class="nav navbar-nav">
+		
+		<li th:if="${session.ses_role == 'Trabalhar'}"><a class="active" th:href="@{/}"> Início </a></li>
+		<li th:if="${session.ses_role == 'Anunciar'}"><a href="#"> Como Funciona </a></li>
+	</ul>
+	
+</div>
+<!-- 	<ul class="nav navbar-nav navbar-right devir-menu-navbar"> -->
+<!-- 		<li><a th:href="@{/sair}" ><span th:text="${session.hs_usuario.nomeCompleto}+' - '+${session.ses_role}"></span> <i class="fa  fa-sign-out"> -->
+<!-- 					</i></a></li> -->
+
+<!-- 	</ul> -->
+	
+
+
+
+
+
+</html>

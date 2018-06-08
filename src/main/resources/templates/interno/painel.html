@@ -2,16 +2,21 @@
 <html lang="pt" xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:th="http://www.thymeleaf.org"
 	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-	xmlns:sec="http://www.springframework.org/security/tags"
-	layout:decorator="layout/template-padrao">
+	layout:decorator="layoutAdmin/template-admin">
 
 <body>
 
-	<section id="content" layout:fragment="conteudo" sec:authorize="isAuthenticated()">
+	<section id="content" layout:fragment="conteudo">
 
 		<div class="container" >
-	
+			<div class="row">
+				<div class="col-xs-12">
+					<h1>Bem vindo, Acesso ao sistema!</h1>
+				</div>
+			</div>
+			
 		</div>
+		
 	</section>
 
 

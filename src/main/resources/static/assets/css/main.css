@@ -1582,7 +1582,8 @@ footer ul li a{
     padding:0
 }
 footer{
-    padding:0
+  	position:absolute;
+    width:100%;
 }
 .widget-title{
     position:relative;

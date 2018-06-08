@@ -149,7 +149,7 @@ public class IndexController {
 		Usuario usuarioAutenticado = usuarioservice.procurarPorEmail(authentication.getName());				
 		session.setAttribute("hs_usuario", usuarioAutenticado);
 		session.setAttribute("ses_role", roleService.getRole(authentication));
-		
+		System.out.println(roleService.getRole(authentication));
 		if(usuarioAutenticado !=null) {
 			if(usuarioAutenticado.isResetada()) {			
 				mav = new ModelAndView("autenticacao/resetarNovaSenha");
