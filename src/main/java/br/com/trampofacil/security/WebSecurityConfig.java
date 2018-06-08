@@ -22,8 +22,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
 	protected void configure(HttpSecurity http) throws Exception{
 		http.csrf().disable().authorizeRequests()
 		.antMatchers("/").permitAll()
-		.antMatchers("/registrar").permitAll()
-		.antMatchers("/resetar").permitAll()
+		.antMatchers("/registrar/**").permitAll()
+		.antMatchers("/resetar/**").permitAll()
 		.antMatchers("/cadastrarEvento").hasRole("ADMIN")
 		.antMatchers("/cadastrarEvento").hasRole("ADMIN")
 		.anyRequest().
