@@ -113,10 +113,11 @@ public class Usuario implements UserDetails,Serializable {
 	public void setSenha(String senha) {
 		this.senha = senha;
 	}
+	
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
 		// TODO Auto-generated method stub
-		return null;
+		return roles;
 	}
 	@Override
 	public String getPassword() {

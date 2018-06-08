@@ -147,13 +147,12 @@ public class IndexController {
 	public ModelAndView painel(HttpSession session,RedirectAttributes attributes,HttpServletResponse response) {
 		ModelAndView mav = null;
 		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+		System.out.println(authentication);
 		Usuario usuarioAutenticado = usuarioservice.procurarPorEmail(authentication.getName());				
 		session.setAttribute("hs_usuario", usuarioAutenticado);
 		System.out.println(usuarioAutenticado.getNome());
-		session.setAttribute("ses_role", roleService.getRole(authentication));
-		System.out.println("1 ->" +authentication.getName());
-		System.out.println("2 ->" +authentication.getDetails());
-		System.out.println("3 ->"+ roleService.getRole(authentication));
+		session.setAttribute("ses_role", roleService.getRole(authentication).toString());
+		System.out.println(roleService.getRole(authentication));
 		if(usuarioAutenticado.isResetada()) {			
 			mav = new ModelAndView("autenticacao/resetarNovaSenha");
 			mav.addObject("usuario",usuarioAutenticado);
