@@ -4,6 +4,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import javax.mail.MessagingException;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
@@ -143,31 +144,31 @@ public class IndexController {
 	
 	
 	@RequestMapping(value = "/painel")
-	public ModelAndView painel(HttpSession session,RedirectAttributes attributes) {
+	public ModelAndView painel(HttpSession session,RedirectAttributes attributes,HttpServletResponse response) {
 		ModelAndView mav = null;
 		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
 		Usuario usuarioAutenticado = usuarioservice.procurarPorEmail(authentication.getName());				
 		session.setAttribute("hs_usuario", usuarioAutenticado);
+		System.out.println(usuarioAutenticado.getNome());
 		session.setAttribute("ses_role", roleService.getRole(authentication));
-		System.out.println(roleService.getRole(authentication));
-		if(usuarioAutenticado !=null) {
-			if(usuarioAutenticado.isResetada()) {			
-				mav = new ModelAndView("autenticacao/resetarNovaSenha");
-				mav.addObject("usuario",usuarioAutenticado);
-			}		
-			else {
-				mav = new ModelAndView("/interno/painel");
-			}
-		}else {
-			mav = new ModelAndView("redirect:/login");
+		System.out.println("1 ->" +authentication.getName());
+		System.out.println("2 ->" +authentication.getDetails());
+		System.out.println("3 ->"+ roleService.getRole(authentication));
+		if(usuarioAutenticado.isResetada()) {			
+			mav = new ModelAndView("autenticacao/resetarNovaSenha");
+			mav.addObject("usuario",usuarioAutenticado);
+		}		
+		else {
+			mav = new ModelAndView("/interno/painel");
 		}
+		
 		
 		return mav;
 	}
 	
 	@RequestMapping(value = "/resetar/alterar", method = RequestMethod.POST)
 	public ModelAndView alterarSenha(Usuario usuarioView, HttpSession sessao, RedirectAttributes attributes) throws MessagingException  {
-		ModelAndView mav = new ModelAndView("acesso");
+		ModelAndView mav = new ModelAndView("redirect:/login");
 		Usuario usuarioSessao = (Usuario) sessao.getAttribute("hs_usuario");
 		String email = usuarioSessao.getEmail();
 		String senhaView = usuarioView.getSenha();
