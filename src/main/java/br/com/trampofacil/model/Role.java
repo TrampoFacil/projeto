@@ -36,8 +36,20 @@ public class Role implements GrantedAuthority{
 	private Date dataCadastro;
 	
 	
+	private String descricao;
 	
-	
+	public String getDescricao() {
+		return descricao;
+	}
+
+
+
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
+	}
+
+
+
 	public List<Usuario> getUsuarios() {
 		return usuarios;
 	}
