@@ -7,6 +7,28 @@ jQuery(document).ready(function( $ ) {
 });
 
 
+$(".roles").click(function() {
+	
+	var count = 0;
+	var checkado = $(this).is(':checked');
+	
+	if(checkado){	
+	    count = $(".roles:checked").length;
+	    if(count >= 1){
+	    	document.getElementById('warning-roles').style.display = 'none';
+	    	$('#btnSalvar').prop("disabled", false);
+	    }
+	}else{
+		count =  $(".roles:checked").length;  
+		if(count == 0){
+			document.getElementById('warning-roles').style.display = 'block';
+			$('#btnSalvar').prop("disabled", true);
+		}
+	}
+	
+});
+
+
 // Page Loader
 $(window).load(function() {
   "use strict";

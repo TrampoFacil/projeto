@@ -61,10 +61,6 @@
 							<div class="form-group">
 								<label class="control-label" for="textarea">O que você desejar fazer? </label>
 
-
-								
-
-
 <!-- 								<div class="frb-group" style="margin-top: -1px;"> -->
 <!-- 									<div class="frb frb-default"> -->
 <!-- 										<input type="checkbox" id="contratante" name="contratante" -->
@@ -89,45 +85,21 @@
 									<div class="frb-group">
 
 										<div class="frb frb-default">
-											<input type="checkbox"  required="true" th:value="${roleTipo.tipo}"
-												th:field="*{roles}"/> <label th:for="${#ids.prev('roles')}"> 
+											<input type="checkbox" class="roles" th:value="${roleTipo.tipo}"
+			 									th:field="*{roles}"/> <label th:for="${#ids.prev('roles')}"> 
 												<span class="frb-title" th:text="${#strings.substring(roleTipo.tipo,5)}"></span> 
 												<span class="frb-description" th:text="${roleTipo.descricao}"></span> 
 			 									</label>
 										</div>
-
+										
 									</div>
 									
 								</th:block>
-
-<!-- 								<th:block th:each="roleTipo : ${roles}"> -->
-
-<!-- 									<div class="col-sm-12 form-controldropdown-product"> -->
-
-<!-- 										<div class="checkbox  checkbox-inline"> -->
-<!-- 											<input type="checkbox" th:value="${roleTipo.tipo}" -->
-<!-- 												th:field="*{roles}" /> <label style="padding-top: 2.7%" -->
-<!-- 												th:for="${#ids.prev('roles')}" -->
-<!-- 												th:text="${#strings.substring(roleTipo.tipo,5)}"></label> -->
-<!-- 										</div> -->
-
-<!-- 									</div> -->
-<!-- 								</th:block> -->
-								
-<!-- 								<select required="true" th:type="text" -->
-<!-- 									class="form-control dropdown-product selectpicker" -->
-<!-- 									th:field="*{roles}"> -->
-<!-- 									<option value="">Selecione</option> -->
-<!-- 									<option th:each="roleTipo : ${roles}" -->
-<!-- 										th:text="${#strings.substring(roleTipo.tipo,5)}" -->
-<!-- 										th:value="${roleTipo.tipo}"></option> -->
-
-<!-- 								</select> -->
-
+								<span class="help-block" id="warning-roles">Escolha pelo menos 1 (um) tipo de perfil!</span>
 
 							</div>
 
-							<button type="submit" id="btnSalvar" class="btn btn-common"> 
+							<button type="submit" id="btnSalvar" class="btn btn-common" disabled="disabled"> 
 								Cadastrar
 							</button>
 							
