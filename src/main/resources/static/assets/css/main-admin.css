@@ -147,9 +147,9 @@ a:hover,a:focus{
 .btn-search-icon:hover{
     color:#fff
 }
-.section{
-    padding:60px 0
-}
+/* .section{ */
+/*     padding:60px 0 */
+/* } */
 .section-title{
     font-size:36px;
     padding:0 0 30px;
@@ -170,9 +170,9 @@ a:hover,a:focus{
     margin-right:0;
     border-bottom:2px solid #337ab7
 }
-#content{
-    padding:80px 0
-}
+/* #content{ */
+/*     padding:80px 0 */
+/* } */
 .main-container{
     padding:80px 0
 }
@@ -748,7 +748,7 @@ label{
     margin-right:10px;
     font-weight:700
 }
-.find-job,.find-job{
+.find-job .nav>li>a:focus,.find-job .nav>li>a:hover{
     background-color:#337ab7;
     color:#fff
 }
@@ -758,16 +758,16 @@ label{
     color:#fff
 }
 .find-job table td{
-    line-height:78px!important;
+    line-height:48px!important;
     font-size:14px;
-    font-weight:700
+    font-weight:500
 }
 .find-job td img{
     margin-right:10px
 }
-.find-job .table-striped>tbody>tr:nth-of-type(2n+1){
-    background:#fff
-}
+/* .find-job .table-striped>tbody>tr:nth-of-type(2n+1){ */
+/*     background:#fff */
+/* } */
 .find-job .table>caption+thead>tr:first-child>td,.find-job .table>caption+thead>tr:first-child>th,.find-job .table>colgroup+thead>tr:first-child>td,.find-job .table>colgroup+thead>tr:first-child>th,.find-job .table>thead:first-child>tr:first-child>td,.find-job .table>thead:first-child>tr:first-child>th{
     padding:15px 0;
     color:#627198;
